@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/editar_recurso.css">
+    <link rel="shortcut icon" href="/Imagenes/Ico.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Editar Recurso</title>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <i class="material-icons book">auto_stories</i>
+            <h4>Biblioteca_Desarrollo_Web</h4>
+        </div>
+        <div class="right">
+            <a href="/HTML/gestionar_recursos.html" class="regresar"><i class="material-icons">arrow_back_ios</i>Regresar</a>
+            <i class="material-icons perfil" id="perfil-icon">account_circle</i>
+            <div class="menu" id="menu">
+                <div class="menu-item">Nombre</div>
+                <div class="menu-item">Rol</div>
+                <div class="menu-item cerrar-sesion">Cerrar Sesión</div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cont">
+        <div class="title_icon">
+            <h5 class="title">Editar Recurso</h5>
+            <i class="material-icons save">save</i>
+        </div>
+        <div class="input">
+            <label for="img">Imagen</label>
+            <input type="file" id="img" class="input_form" placeholder="html.png">
+        </div>
+        <div class="input">
+            <label for="title">Titulo</label>
+            <input type="text" id="title" class="input_form" placeholder="HTML: Lenguaje de etiquetas de hipertexto">
+        </div>
+        <div class="input">
+            <label for="content">Contenido</label>
+            <textarea id="content" class="textarea" placeholder="Agregar Titulo" cols="120" rows="30">
+                ¿Qué es HTML?
+
+                El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos. Como lo sugiere el título, este artículo te dará una comprensión básica de HTML y cual es su función.
+
+                HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura de tu contenido. HTML consiste en una serie de elementos que usarás para encerrar diferentes partes del contenido para que se vean o comporten de una determinada manera. Las etiquetas de encierre pueden hacer de una palabra o una imagen un hipervínculo a otro sitio, se pueden cambiar palabras a cursiva, agrandar o achicar la letra, etc. Por ejemplo, toma la siguiente línea de contenido:
+
+                Mi gato es muy gruñon
+
+                Si quieres especificar que se trata de un párrafo, podrías encerrar el texto con la etiqueta de párrafo (<p>):
+
+                <p>Mi gato es muy gruñon</p>
+
+                Anidar Elementos
+
+                Puedes también colocar elementos dentro de otros elementos —esto se llama anidamiento—. Si, por ejemplo, quieres resaltar una palabra del texto (en el ejemplo la palabra «muy»), podemos encerrarla en un elemento <strong>, que significa que dicha palabra se debe enfatizar:
+
+                <p>Mi gato es <strong>muy</strong> gruñon.</p>
+
+                Los elementos deben abrirse y cerrarse ordenadamente, de forma tal que se encuentren claramente dentro o fuera el uno del otro. Si estos se encuentran solapados, el navegador web tratará de adivinar lo que intentas decirle, pero puede que obtengas resultados inesperados. Así que, ¡no lo hagas!
+
+                Elementos Vacíos
+
+                Algunos elementos no poseen contenido, y son llamados elementos vacíos. Toma, por ejemplo, el elemento <img> de nuestro HTML:
+
+                <img src="images/imagen_ejemplo.png" alt="Imagen de prueba" />
+
+                Posee dos atributos, pero no hay etiqueta de cierre </img> ni contenido encerrado. Esto es porque un elemento de imagen no encierra contenido al cual afectar. Su propósito es desplegar una imagen en la página HTML, en el lugar en que aparece.
+
+                Anatomía de un documento HTML
+            </textarea>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <h6 class="footer__title">Necesitas Ayuda?</h6>
+            <input type="button" value="Contáctanos" class="footer__btn">
+        </div>
+        <div class="footer">
+            <h6 class="footer__title">Atención al cliente</h6>
+            <p class="footer__desc">Devoluciones y garantias</p>
+            <p class="footer__desc">Pagos</p>
+            <p class="footer__desc">Envío</p>
+        </div>
+        <div class="footer">
+            <h6 class="footer__title">Información corporativa</h6>
+            <p class="footer__desc">Sobre nosotros</p>
+            <p class="footer__desc">Marcas</p>
+            <p class="footer__desc">Afiliados</p>
+        </div>
+        <div class="footer">
+            <img src="/Imagenes/redes_sociales.png" alt="" class="footer__img">
+        </div>
+    </footer>
+    <script src="/JavaScript/menu.js"></script>
+</body>
+</html>

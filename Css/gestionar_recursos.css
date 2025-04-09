@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f6f6;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #7c4dff;
+    color: #fff;
+}
+
+h4{
+    padding-left: 10px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex; /* Usamos flexbox para los elementos de la derecha */
+    position: relative;
+    align-items: center;
+}
+
+.regresar{
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center; /* Alinea el icono y el texto en el centro */
+    color: #fff;
+}
+
+.menu {
+    position: absolute;
+    display: none; /* Esta propieda con la position hacen que los item se oculten */
+    top: 45px;
+    right: 0;
+    background: transparent;
+    border-radius: 5px;
+    width: 120px;
+    border: 1px solid #7c4dff;
+    
+}
+
+.menu-item {
+    padding: 10px;
+    border-bottom: 1px solid #b38df7;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+}
+
+.menu-item:last-child {
+    border-bottom: none; /* Le quita el border al ultimo item */
+}
+
+.menu-item:hover {
+    box-shadow: 0 0 5px 0px #7c4dffab;
+    border-radius: 5px;
+}
+
+.cerrar-sesion {
+    font-weight: bold;
+}
+
+.material-icons {
+    color: #fff;
+    margin: 0;
+    cursor: pointer;
+}
+
+section {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buscar_gest{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 70%;
+}
+
+.search-container i {
+    color: gray;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    margin-left: 5px;
+    outline: none;
+}
+
+.btn {
+    background-color: #7c4dff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #4a5add;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #eee;
+}
+
+.icon-btn {
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
+}
+
+.icon-btn:hover {
+    color: black;
+}
+
+.status-terminado {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pendiente {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-anulado {
+    color: red;
+    font-weight: bold;
+}

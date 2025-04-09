@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/nuevo_recurso.css">
+    <link rel="shortcut icon" href="/Imagenes/Ico.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Nuevo Recurso</title>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <i class="material-icons book">auto_stories</i>
+            <h4>Biblioteca_Desarrollo_Web</h4>
+        </div>
+        <div class="right">
+            <a href="/HTML/gestionar_recursos.html" class="regresar"><i class="material-icons">arrow_back_ios</i>Regresar</a>
+            <i class="material-icons perfil" id="perfil-icon">account_circle</i>
+            <div class="menu" id="menu">
+                <div class="menu-item">Nombre</div>
+                <div class="menu-item">Rol</div>
+                <div class="menu-item cerrar-sesion">Cerrar Sesión</div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cont">
+        <div class="title_icon">
+            <h5 class="title">Crear un Nuevo Recurso</h5>
+            <i class="material-icons save">save</i>
+        </div>
+        <div class="input">
+            <label for="img">Imagen</label>
+            <input type="file" id="img" class="input_form" placeholder="Agregar una imagen">
+        </div>
+        <div class="input">
+            <label for="title">Titulo</label>
+            <input type="text" id="title" class="input_form" placeholder="Agregar Titulo">
+        </div>
+        <div class="input">
+            <label for="content">Contenido</label>
+            <textarea id="content" class="textarea" placeholder="Agregar Titulo" cols="120" rows="30"></textarea>
+        </div>
+    </section> 
+
+    <footer>
+        <div class="footer">
+            <h6 class="footer__title">Necesitas Ayuda?</h6>
+            <input type="button" value="Contáctanos" class="footer__btn">
+        </div>
+        <div class="footer">
+            <h6 class="footer__title">Atención al cliente</h6>
+            <p class="footer__desc">Devoluciones y garantias</p>
+            <p class="footer__desc">Pagos</p>
+            <p class="footer__desc">Envío</p>
+        </div>
+        <div class="footer">
+            <h6 class="footer__title">Información corporativa</h6>
+            <p class="footer__desc">Sobre nosotros</p>
+            <p class="footer__desc">Marcas</p>
+            <p class="footer__desc">Afiliados</p>
+        </div>
+        <div class="footer">
+            <img src="/Imagenes/redes_sociales.png" alt="" class="footer__img">
+        </div>
+    </footer>
+    <script src="/JavaScript/menu.js"></script>
+</body>
+</html>
