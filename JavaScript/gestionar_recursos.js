@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td class="${getStatusClass(resource.status)}">${resource.status}</td>
             <td>${resource.views}</td>
             <td>
-                <a href="/HTML/editar_recurso.html"><i class="material-icons icon-btn">edit</i></a>
+                <a href="../HTML/editar_recurso.html"><i class="material-icons icon-btn">edit</i></a>
                 <i class="material-icons icon-btn">delete</i>
             </td>
         `;
