@@ -20,4 +20,8 @@ export class LoginComponent {
   enviar(){
     console.log(this.formLogin);
   }
+
+  hasErrors(controlName:string, tipoError: string){
+    return this.formLogin.get(controlName)?.hasError(tipoError) && this.formLogin.get(controlName)?.touched;
+  }
 }
