@@ -6,7 +6,8 @@
             <label for="user">Correo Electrónico</label>
             <i class="material-icons left">mail</i>
             <input type="email" id="user" class="input_form" placeholder="ejemplo@gmail.com" formControlName="email">
-            <div class="error" *ngIf="hayError('email','required')">Correo Invalido</div> <!--hayError es un metodo-->
+            <div class="error" *ngIf="hayError('email','required')">Correo Requerido</div> <!--hayError es un metodo-->
+            <div class="error" *ngIf="hayError('email','email')">Correo Invalido</div>
         </div>
         <div class="input icons">
             <label for="password">Contraseña</label>
@@ -17,7 +18,7 @@
             <div class="error" *ngIf="hayError('pass','minlength')">La contraseña debe tener minimo 5 caracteres</div>
         </div>
         <div class="boton">
-            <!-- <a routerLink="homeAdmin">Aceptar</a> -->
+            <a routerLink="homeAdmin">Aceptar</a>
             <button type="submit" class="btn">Aceptar</button>
         </div>
         <p class="registro">¿No tienes cuenta? <a routerLink="/reg_usuario">Regístrate Aquí</a></p>

@@ -42,7 +42,7 @@ label,p{
     border-radius: 8px;
     border: none;
     padding: 5px 0 8px 40px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border: 1px solid #ebebeb;
 }
 
@@ -71,15 +71,18 @@ a{
     color: #7c4dff;
 }
 
-.input{ /* Contiene el input y los icon */
+.icons{ /* Contiene el input y los icon */
     position: relative;
+}
+.input{
+    margin-bottom: 15px;
 }
 
 .left{
     position: absolute;
     left: 12px;  /* Coloca el icono a la izquierda */
-    top: 50%; /* Centrado verticalmente */
-    transform: translateY(-40%);  /*Alinea verticalmente el icono*/
+    /*top: 50%; /* Centrado verticalmente */
+    transform: translateY(140%);  /*Alinea verticalmente el icono*/
     font-size: 24px;
     color: #7c4dff;
 }
@@ -87,8 +90,15 @@ a{
 .right{
     position: absolute; /* Permite colocar el icono dentro del campo sin afectar el contenido del input */
     right: 12px;  /* Coloca el icono a la derecha */
-    top: 50%; /* Centrado verticalmente */
-    transform: translateY(-40%);  /*Alinea verticalmente el icono*/
+    /*top: 50%; /* Centrado verticalmente */
+    transform: translateY(50%);  /*Alinea verticalmente el icono*/
     font-size: 24px;
     color: #c7c7c7;
+}
+
+.error{
+    color: #c50000;
+    font-size: 11px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
 }
