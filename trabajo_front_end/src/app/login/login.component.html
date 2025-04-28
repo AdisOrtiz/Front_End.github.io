@@ -28,6 +28,8 @@
             
             <div class="error" *ngIf="hayError('pass','required')">*Contraseña requerida</div> <!--Muestra este mensaje si se cumple el error que estoy pasando en el 2do parametro-->
             <div class="error" *ngIf="hayError('pass','minlength')">*La contraseña debe tener minimo 5 caracteres</div>
+
+            <div *ngIf="error" class="error">{{ error }}</div>
         </div>
         <div class="boton">
             <!-- <a routerLink="homeAdmin">Aceptar</a> -->
@@ -35,5 +37,5 @@
         </div>
         <p class="registro">¿No tienes cuenta? <a routerLink="/reg_usuario">Regístrate Aquí</a></p>
     </form>
-    <div *ngIf="error" style="color: red;">{{ error }}</div>
+    
 </div>

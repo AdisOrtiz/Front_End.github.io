@@ -85,6 +85,37 @@ h4{
     cursor: pointer;
 }
 
+.cont_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.cont_left{
+    width: 20%;
+    padding: 10px;
+}
+
+.cont_img {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 35%;
+}
+
+.cont_right{
+    width: 70%;
+}
+
+.preguntas {
+    text-align: center;
+    margin: 15px 0; 
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
 footer{

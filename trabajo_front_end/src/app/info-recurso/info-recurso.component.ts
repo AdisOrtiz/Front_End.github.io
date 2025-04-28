@@ -4,7 +4,7 @@ import { listaRecursos, Recurso } from '../home-admin/recursos.mock';
 
 @Component({
   selector: 'app-info-recurso',
-  templateUrl: './info-recurso.component.html',
+  templateUrl:'./info-recurso.component.html',
   styleUrls: ['./info-recurso.component.css']
 })
 export class InfoRecursoComponent implements OnInit{

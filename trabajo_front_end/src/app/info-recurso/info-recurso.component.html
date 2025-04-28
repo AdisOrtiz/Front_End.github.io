@@ -15,10 +15,30 @@
         </div>
     </nav>
     
-    <section class="cont">
-        <h3>{{ recurso?.title }}</h3>
-        <p>{{ recurso?.descrip }}</p>
-    </section>
+    <main class="cont_main">
+        <section class="cont_left">
+            <div class="cont_img">
+                <img src="{{recurso?.img}}" alt="" class="img">
+            </div>
+            <h3 class="preguntas">
+                <a href="#pregun1">{{ recurso?.pregun1 }}</a>
+            </h3>
+            <h3 class="preguntas">
+                <a href="#pregun2">{{recurso?.pregun2}}</a>
+            </h3>
+            <h3 class="preguntas">
+                <a href="#pregun3">{{recurso?.pregun3}}</a>
+            </h3>
+            <h3 class="preguntas">
+                <a href="#pregun4">{{recurso?.pregun4}}</a>
+            </h3>
+        </section>
+    
+        <section class="cont_right">
+            <h3 class="tittle">{{ recurso?.title }}</h3>
+            <p class="descrip" id="pregun1">{{ recurso?.descrip1 }}</p>
+        </section>
+    </main>
     
     <footer>
         <div class="footer">
