@@ -7,7 +7,7 @@ import { RegUsuComponent } from './reg-usu/reg-usu.component';
 import { LoginComponent } from './login/login.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { InfoRecursoComponent } from './info-recurso/info-recurso.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule //Formularios de tipo reactivo
   ],
   providers: [],

@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegUsuComponent {
   formRegUsu: FormGroup;
+  mostrarPass: boolean = false;
 
   constructor( private formReg: FormBuilder){
     this.formRegUsu = this.formReg.group ({
@@ -19,5 +20,9 @@ export class RegUsuComponent {
 
   hayError(nomError: string, tipoError: string) {
     return this.formRegUsu.get(nomError)?.hasError(tipoError) && this.formRegUsu.get(nomError)?.touched;
+  }
+
+  mostrarConstrasena(){
+    this.mostrarPass = !this.mostrarPass;
   }
 }

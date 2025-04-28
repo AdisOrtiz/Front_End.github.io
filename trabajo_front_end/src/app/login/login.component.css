@@ -41,8 +41,7 @@ label,p{
     height: 45px;
     border-radius: 8px;
     border: none;
-    padding: 5px 0 8px 40px;
-    /* margin-bottom: 15px; */
+    padding: 5px 40px 8px 40px;
     border: 1px solid #ebebeb;
 }
 
@@ -60,6 +59,7 @@ input:focus{
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .registro{
@@ -89,10 +89,13 @@ a{
 .right{
     position: absolute; /* Permite colocar el icono dentro del campo sin afectar el contenido del input */
     right: 12px;  /* Coloca el icono a la derecha */
-    /*top: 50%;  Centrado verticalmente */
-    transform: translateY(50%);  /*Alinea verticalmente el icono*/
+    /*top: 50%;  /*Centrado verticalmente */
+    transform: translateY(30%);  /*Alinea verticalmente el icono*/
     font-size: 24px;
     color: #c7c7c7;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .error{
@@ -100,4 +103,8 @@ a{
     font-size: 11px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-left: 10px;
+}
+
+.error_input{
+    border: 1px solid #c50000;
 }

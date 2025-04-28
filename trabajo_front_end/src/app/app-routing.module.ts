@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'reg_usuario', component: RegUsuComponent },
   { path: 'homeAdmin', component: HomeAdminComponent },
-  { path: 'recurso/:recursoId', component: InfoRecursoComponent }
-  /*{ path: '**', redirectTo: '', pathMatch: 'full' }*/ /*Cuando en la url sea cualquier cosa */
+  { path: 'recurso/:recursoId', component: InfoRecursoComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' } /*Cuando en la url sea cualquier cosa */
 ];
 
 @NgModule({
