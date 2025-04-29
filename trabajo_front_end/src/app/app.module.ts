@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { InfoRecursoComponent } from './info-recurso/info-recurso.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeClienteComponent } from './home-cliente/home-cliente.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegUsuComponent,
     LoginComponent,
     HomeAdminComponent,
-    InfoRecursoComponent
+    InfoRecursoComponent,
+    HomeClienteComponent
   ],
   imports: [
     BrowserModule,

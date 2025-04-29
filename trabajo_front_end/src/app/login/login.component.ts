@@ -24,10 +24,6 @@ export class LoginComponent{
     })
   }
 
-  enviar(){
-    console.log(this.formLogin);
-  }
-
   hayError(nomControl:string, tipoError: string){
     return this.formLogin.get(nomControl)?.hasError(tipoError) && this.formLogin.get(nomControl)?.touched;
   }
