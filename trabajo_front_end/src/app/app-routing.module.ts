@@ -6,7 +6,7 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { InfoRecursoComponent } from './info-recurso/info-recurso.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'reg_usuario', component: RegUsuComponent },
   { path: 'homeAdmin', component: HomeAdminComponent },
   { path: 'recurso/:recursoId', component: InfoRecursoComponent },

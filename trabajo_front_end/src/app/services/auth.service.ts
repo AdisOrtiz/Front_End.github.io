@@ -8,7 +8,7 @@ export class AuthService {
 
   private usuarios = [
     {username: 'admin@prueba.co', password: 'admin123', rol: 'admin'},
-    {username: 'visualizador@prueba.co', password: 'visual123', rol:'cliente'}
+    {username: 'cliente@prueba.co', password: 'cliente123', rol:'cliente'}
   ];
 
   public usuarioActual: any = null;
