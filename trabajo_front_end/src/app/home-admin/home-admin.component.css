@@ -41,14 +41,15 @@ h4{
 
 .menu {
     position: absolute;
-    display: none; /* Esta propieda con la position hacen que los item se oculten */
+    /*display: none; /* Esta propieda con la position hacen que los item se oculten */
     top: 45px;
     right: 0;
     background: transparent;
     border-radius: 5px;
-    width: 120px;
+    min-width: 120px;
     border: 1px solid #ffffff;
     box-shadow: 0 0 5px 0px #ffffff94;
+    z-index: 100; /* Para asegurarse de que se muestre encima de otros elementos */
 }
 
 .menu-item {
