@@ -20,23 +20,28 @@
             <div class="cont_img">
                 <img src="{{recurso?.img}}" alt="" class="img">
             </div>
+            <!--[routerLink]="[]" -> Hace que se mantenga en la misma ruta.
+            fragment="preg1" -> significa "ve hacia el elemento con id='preg1'".-->
             <h3 class="preguntas">
-                <a href="#pregun1">{{ recurso?.pregun1 }}</a>
+                <a [routerLink]="[]" fragment="preg1">{{ recurso?.pregun1 }}</a>
             </h3>
             <h3 class="preguntas">
-                <a href="#pregun2">{{recurso?.pregun2}}</a>
+                <a [routerLink]="[]" fragment="preg2">{{recurso?.pregun2}}</a>
             </h3>
             <h3 class="preguntas">
-                <a href="#pregun3">{{recurso?.pregun3}}</a>
+                <a [routerLink]="[]" fragment="preg3">{{recurso?.pregun3}}</a>
             </h3>
             <h3 class="preguntas">
-                <a href="#pregun4">{{recurso?.pregun4}}</a>
+                <a [routerLink]="[]" fragment="preg4">{{recurso?.pregun4}}</a>
             </h3>
         </section>
     
         <section class="cont_right">
             <h3 class="tittle">{{ recurso?.title }}</h3>
-            <p class="descrip" id="pregun1">{{ recurso?.descrip1 }}</p>
+            <p class="descrip" id="preg1">{{ recurso?.descrip1 }}</p>
+            <p class="descrip" id="preg2">{{ recurso?.descrip2 }}</p>
+            <p class="descrip" id="preg3">{{ recurso?.descrip3 }}</p>
+            <p class="descrip" id="preg4">{{ recurso?.descrip4 }}</p>
         </section>
     </main>
     

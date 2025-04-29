@@ -55,7 +55,6 @@ h4{
     border-radius: 5px;
     width: 120px;
     border: 1px solid #7c4dff;
-    
 }
 
 .menu-item {
@@ -88,13 +87,17 @@ h4{
 .cont_main{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 10px 30px;
 }
 
 .cont_left{
-    width: 20%;
-    padding: 10px;
+    width: 25%;
+    padding: 25px 10px;
+    background: #fff;
+    min-height: 700px;
+    margin-top: 10px ;
+    border-radius: 10px;
 }
 
 .cont_img {
@@ -107,7 +110,14 @@ h4{
 }
 
 .cont_right{
-    width: 70%;
+    width: 80%;
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+    min-height: 700px;
+    padding: 25px 45px;
+    margin: 10px 10px 0 40px;
+    border-radius: 10px;
 }
 
 .preguntas {
@@ -117,6 +127,20 @@ h4{
     cursor: pointer;
 }
 
+.preguntas a {
+    text-decoration: none;
+    color: #444;
+}
+
+.tittle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.descrip{
+    text-align: justify;
+    white-space: pre-line;
+}
 
 footer{
     width: 100%;

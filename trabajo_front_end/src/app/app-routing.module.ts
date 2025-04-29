@@ -6,7 +6,7 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { InfoRecursoComponent } from './info-recurso/info-recurso.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'reg_usuario', component: RegUsuComponent },
   { path: 'homeAdmin', component: HomeAdminComponent },
   { path: 'recurso/:recursoId', component: InfoRecursoComponent },
@@ -14,7 +14,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled',
+    scrollPositionRestoration: 'enabled' //Junto con el anchorScrolling se usa para habilitar el scroll automático. (para la navegación a fragmentos)
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

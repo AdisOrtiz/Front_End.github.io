@@ -1,5 +1,5 @@
 <div class="cont">
-    <form class="login" [formGroup]="formLogin" (ngSubmit)="login(); $event.preventDefault();">
+    <form class="login" [formGroup]="formLogin" (ngSubmit)="login(); $event.preventDefault();"> <!--$event.preventDefault(); -> Detiene el comportamiento por defecto de un evento del navegador-->
         <h3>Iniciar Sesión</h3>
         <p>Inicie sesión ingresando su dirección de correo electrónico y contraseña.</p>
         <div class="input icons">
