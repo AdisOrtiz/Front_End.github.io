@@ -9,6 +9,7 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { InfoRecursoComponent } from './info-recurso/info-recurso.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeClienteComponent } from './home-cliente/home-cliente.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeClienteComponent } from './home-cliente/home-cliente.component';
     LoginComponent,
     HomeAdminComponent,
     InfoRecursoComponent,
-    HomeClienteComponent
+    HomeClienteComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

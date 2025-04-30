@@ -21,7 +21,7 @@ export class AuthService {
       // Si existe, lo convierte de JSON a objeto y lo asigna a usuarioActual
       this.usuarioActual = JSON.parse(usuarioGuardado);
     }
-   }
+  }
 
   login(usuname: string, pass: string): boolean {
     // Busca un usuario que coincida con el username y password ingresados

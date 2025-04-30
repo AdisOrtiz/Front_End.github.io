@@ -1,27 +1,4 @@
 <div class="cont">
-    <nav>
-        <div class="left">
-            <span class="material-icons arroba">alternate_email</span>
-            <h4>Biblioteca_Desarrollo_Web</h4>
-        </div>
-        <div class="right">
-            <!-- Enlace de gestión de recursos -->
-            <!-- <a href="#" class="link_gest" (click)="cerrarMenu()">
-                <span class="material-icons">add</span>Gestionar Recursos
-            </a> -->
-            <!--Icono Perfil-->
-            <span class="material-icons perfil" id="perfil-icon" (click)="alternarMenu($event)">account_circle</span>
-            <!--Menu desplegable-->
-            <div class="menu" id="menu" *ngIf="menuVisible">
-                <!-- Muestra el correo del usuario -->
-                <div class="menu-item">{{ correoUsu }}</div>
-                <!-- Muestra el rol del usuario -->
-                <div class="menu-item">{{ rolUsu }}</div>
-                <!-- Botón para cerrar sesión -->
-                <div class="menu-item cerrar-sesion" (click)="logout()">Cerrar Sesión</div>
-            </div>
-        </div>
-    </nav>
     <header>
         <h2>¿Cómo podemos ayudarle?</h2>
         <input type="text" class="buscar" placeholder="Buscar">
