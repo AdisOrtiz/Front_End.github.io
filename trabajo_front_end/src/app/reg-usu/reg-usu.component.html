@@ -1,0 +1,41 @@
+<div class="cont">
+    <form class="login"  [formGroup]="formRegUsu" (ngSubmit)="regUsuario()"> <!--action="../home-admin/home-admin.component.html"-->
+        <h3>Crea tu cuenta</h3>
+        <div class="input icons">
+            <label for="nom_ape">Nombre y Apellido</label>
+            <i class="material-icons left">edit</i>
+            <input [ngClass]="{'error_input': hayError('nomComplet','required')}" type="text" id="nom_ape" class="input_form" placeholder="Adis Ortiz" formControlName="nomComplet">
+            <div class="error" *ngIf="hayError('nomComplet','required')">*Nombre Completo Requerido</div>
+        </div>
+        <div class="input icons">
+            <label for="email">Correo Electrónico</label>
+            <i class="material-icons left">mail</i>
+            <input [ngClass]="{'error_input': hayError('correo','required') || hayError('correo','email')}" type="email" id="email" class="input_form" placeholder="ejemplo@gmail.com" formControlName="correo">
+            <div class="error" *ngIf="hayError('correo','required')">*Correo Electronico Requerido</div> <!--hayError es un metodo-->
+            <div class="error" *ngIf="hayError('correo','email')">*Correo Electronico Invalido</div>
+        </div>
+        <div class="input icons">
+            <label for="password">Contraseña</label>
+            <span class="material-icons left">lock</span>
+            
+            <input 
+            [ngClass]="{'error_input': hayError('contra','required') || hayError('contra','minlength')}"
+            [type]="mostrarPass ? 'text' : 'password'"
+            id="password" class="input_form" placeholder="●●●●●●●●●●●" formControlName="contra">
+            
+            <button type="button" (click)="mostrarConstrasena()" class="right">
+                <span class="material-icons">
+                    {{mostrarPass ? 'visibility_off' : 'visibility'}}
+                </span>
+            </button>
+
+            <div class="error" *ngIf="hayError('contra','required')">*Contraseña Requerida</div>
+            <div class="error" *ngIf="hayError('contra','minlength')">*La contraseña debe tener minimo 5 caracteres</div>
+        </div>
+        <div class="boton">
+            <input type="button" class="btn" value="Aceptar" (click)="regUsuario()">
+        </div>
+        <p>Al crear una cuenta, usted acepta los Términos de servicio y la Política de privacidad.</p>
+        <p class="registro">¿Ya tienes una cuenta? <a routerLink="" target="">Inicia Sesión Aquí.</a></p>
+    </form>
+</div>

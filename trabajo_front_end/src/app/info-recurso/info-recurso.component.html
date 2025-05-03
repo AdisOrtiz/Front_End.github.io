@@ -1,0 +1,53 @@
+<div class="cont">    
+    <main class="cont_main">
+        <section class="cont_left">
+            <div class="cont_img">
+                <img src="{{recurso?.img}}" alt="" class="img">
+            </div>
+            <!--[routerLink]="[]" -> Hace que se mantenga en la misma ruta.
+            fragment="preg1" -> significa "ve hacia el elemento con id='preg1'".-->
+            <h3 class="preguntas">
+                <a [routerLink]="[]" fragment="preg1">{{ recurso?.pregun1 }}</a>
+            </h3>
+            <h3 class="preguntas">
+                <a [routerLink]="[]" fragment="preg2">{{recurso?.pregun2}}</a>
+            </h3>
+            <h3 class="preguntas">
+                <a [routerLink]="[]" fragment="preg3">{{recurso?.pregun3}}</a>
+            </h3>
+            <h3 class="preguntas">
+                <a [routerLink]="[]" fragment="preg4">{{recurso?.pregun4}}</a>
+            </h3>
+        </section>
+    
+        <section class="cont_right">
+            <h3 class="tittle">{{ recurso?.title }}</h3>
+            <p class="descrip" id="preg1">{{ recurso?.descrip1 }}</p>
+            <p class="descrip" id="preg2">{{ recurso?.descrip2 }}</p>
+            <p class="descrip" id="preg3">{{ recurso?.descrip3 }}</p>
+            <p class="descrip" id="preg4">{{ recurso?.descrip4 }}</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <h6 class="footer__title">Necesitas Ayuda?</h6>
+            <input type="button" value="Contáctanos" class="footer__btn">
+        </div>
+        <div class="footer">
+            <h6 class="footer__title">Atención al cliente</h6>
+            <p class="footer__desc">Devoluciones y garantias</p>
+            <p class="footer__desc">Pagos</p>
+            <p class="footer__desc">Envío</p>
+        </div>
+        <div class="footer">
+            <h6 class="footer__title">Información corporativa</h6>
+            <p class="footer__desc">Sobre nosotros</p>
+            <p class="footer__desc">Marcas</p>
+            <p class="footer__desc">Afiliados</p>
+        </div>
+        <div class="footer">
+            <img src="../../assets/images/redes_sociales.png" alt="redes_sociales" class="footer__img">
+        </div>
+    </footer>
+</div>
