@@ -23,18 +23,39 @@ export class AuthService {
     }
   }
 
-  login(usuname: string, pass: string): boolean {
-    // Busca un usuario que coincida con el username y password ingresados
-    const user = this.usuarios.find(us => us.username === usuname && us.password === pass);
-    if (user) {
-      // Si encuentra, guarda el usuario en memoria y en localStorage
-      this.usuarioActual = user;
-      localStorage.setItem('usuario', JSON.stringify(user)); // persistencia
+  // login(usuname: string, pass: string): boolean {
+  //   // Busca un usuario que coincida con el username y password ingresados
+  //   const user = this.usuarios.find(us => us.username === usuname && us.password === pass);
+  //   if (user) {
+  //     // Si encuentra, guarda el usuario en memoria y en localStorage
+  //     this.usuarioActual = user;
+  //     localStorage.setItem('usuario', JSON.stringify(user)); // persistencia
 
-      return true; // Login exitoso
+  //     return true; // Login exitoso
+  //   }
+  //   return false; // Login fallido
+  // }
+
+  login(usuname: string, pass: string): boolean {
+    // Buscar en la lista estática
+    const userEstatico = this.usuarios.find(us => us.username === usuname && us.password === pass);
+  
+    // Buscar en usuarios registrados (localStorage)
+    const usuariosRegistradosRaw = localStorage.getItem('usuarios_registrados');
+    const usuariosRegistrados = usuariosRegistradosRaw ? JSON.parse(usuariosRegistradosRaw) : [];
+  
+    const userRegistrado = usuariosRegistrados.find((us: any) => us.username === usuname && us.password === pass);
+  
+    const user = userEstatico || userRegistrado;
+  
+    if (user) {
+      this.usuarioActual = user;
+      localStorage.setItem('usuario', JSON.stringify(user));
+      return true;
     }
-    return false; // Login fallido
+    return false;
   }
+  
 
   //Cerrar sesion
   logout() {

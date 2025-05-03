@@ -1,16 +1,23 @@
-<nav *ngIf="rolUsu === 'admin'; else clienteHeader">
+<nav *ngIf="rolUsu === 'admin'; else clienteHeader"
+    [ngClass]="{'recurso_espec': recursoEspec}"><!--Si el usuario que ingreso es admin, se muestra esta estructura
+    Este estilo 'recurso_espec' se va a aplicar solo si recursoEspec es true-->
     <div class="left">
-        <span class="material-icons arroba">alternate_email</span>
+        <span class="material-icons arroba" *ngIf="!recursoEspec">alternate_email</span> <!--Si recursoEspec es false (!recursoEspec dice: si recursoEspec NO es true, coloca este icono), se muestra este icono, de lo contrario se muestra el de abajo-->
+        <span class="material-icons book" *ngIf="recursoEspec">auto_stories</span> <!--Si recursoEspec es true, muestra este icono-->
         <h4>Biblioteca_Desarrollo_Web</h4>
     </div>
     <div class="right">
         <!-- Enlace de gestión de recursos -->
-        <a routerLink="/gest_recursos" class="link_gest" (click)="cerrarMenu()">
+        <a *ngIf="!recursoEspec" routerLink="#" class="link_gest" (click)="cerrarMenu()">
             <span class="material-icons">add</span>Gestionar Recursos
         </a>
+        <!--Regresar-->
+        <a *ngIf="recursoEspec" routerLink="/homeAdmin" class="regresar">
+            <span class="material-icons regre">arrow_back_ios</span>Regresar
+        </a>
+
         <!--Icono Perfil-->
-        
-        <span class="material-icons perfil" id="perfil-icon" (click)="alternarMenu($event)">account_circle</span>
+        <span [ngClass]="{'recursoEspecPerfil': recurso_Espc_perfil}" class="material-icons perfil" id="perfil-icon" (click)="alternarMenu($event)">account_circle</span>
         <!--Menu desplegable-->
         <div class="menu" id="menu" *ngIf="menuVisible">
             <!-- Muestra el correo del usuario -->
@@ -24,14 +31,19 @@
 </nav>
 
 <ng-template #clienteHeader>
-    <nav>
+    <nav [ngClass]="{'recurso_espec': recursoEspec}">
         <div class="left">
-            <span class="material-icons arroba">alternate_email</span>
+            <span class="material-icons arroba" *ngIf="!recursoEspec">alternate_email</span>
+            <span class="material-icons book" *ngIf="recursoEspec">auto_stories</span> <!--Si recursoEspec es true, muestra este icono-->
             <h4>Biblioteca_Desarrollo_Web</h4>
         </div>
         <div class="right">
+            <!--Regresar-->
+            <a *ngIf="recursoEspec" routerLink="/homeCliente" class="regresar">
+                <span class="material-icons regre">arrow_back_ios</span>Regresar
+            </a>
             <!--Icono Perfil-->
-            <span class="material-icons perfil" id="perfil-icon" (click)="alternarMenu($event)">account_circle</span>
+            <span [ngClass]="{'recursoEspecPerfil': recurso_Espc_perfil}" class="material-icons perfil" id="perfil-icon" (click)="alternarMenu($event)">account_circle</span>
             <!--Menu desplegable-->
             <div class="menu" id="menu" *ngIf="menuVisible">
                 <!-- Muestra el correo del usuario -->

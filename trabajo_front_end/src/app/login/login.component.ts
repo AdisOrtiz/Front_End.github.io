@@ -44,4 +44,32 @@ export class LoginComponent{
       this.error = 'Usuario o contraseña incorrectos';
     }
   }
+
+  // Método de login sin backend
+  regUsuario_login() {
+    const datosLogin = this.formLogin.value;
+
+    // Recupera el usuario registrado desde localStorage (si existe)
+    const usuarioGuardado = JSON.parse(localStorage.getItem('usuario_registrado') || '{}');
+
+    // Verifica si el correo y la contraseña coinciden
+    if (
+      datosLogin.email === usuarioGuardado.correo &&
+      datosLogin.pass === usuarioGuardado.contra
+    ) {
+      // Guarda en localStorage que este usuario está logueado actualmente
+      localStorage.setItem('usuario_logueado', JSON.stringify(usuarioGuardado));
+
+      // Redirige según el rol (puedes ajustar esto como desees)
+      if (usuarioGuardado.rol === 'admin') {
+        this.router.navigate(['/homeAdmin']);
+      } else {
+        this.router.navigate(['/homeCliente']);
+      }
+    } else {
+      // Si no coinciden, muestra error
+      this.error = 'Correo o contraseña incorrectos';
+    }
+  }
+  
 }

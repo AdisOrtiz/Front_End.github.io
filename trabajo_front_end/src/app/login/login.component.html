@@ -8,7 +8,9 @@
             <input 
             [ngClass]="{'error_input': hayError('email','required') || hayError('email','email')}" 
             type="email" id="user" class="input_form" placeholder="ejemplo@gmail.com" formControlName="email" [(ngModel)]="username">
-            <div class="error" *ngIf="hayError('email','required')">*Correo Requerido</div> <!--hayError es un metodo-->
+            <div class="error" *ngIf="hayError('email','required')">
+                *Correo Requerido.
+            </div> <!--hayError es un metodo-->
             <div class="error" *ngIf="hayError('email','email')">*Correo Invalido</div>
         </div>
         <div class="input icons">

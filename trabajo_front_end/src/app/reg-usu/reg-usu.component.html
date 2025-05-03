@@ -1,5 +1,5 @@
 <div class="cont">
-    <form class="login"  [formGroup]="formRegUsu"> <!--action="../home-admin/home-admin.component.html"-->
+    <form class="login"  [formGroup]="formRegUsu" (ngSubmit)="regUsuario()"> <!--action="../home-admin/home-admin.component.html"-->
         <h3>Crea tu cuenta</h3>
         <div class="input icons">
             <label for="nom_ape">Nombre y Apellido</label>
@@ -33,7 +33,7 @@
             <div class="error" *ngIf="hayError('contra','minlength')">*La contraseña debe tener minimo 5 caracteres</div>
         </div>
         <div class="boton">
-            <input type="submit" class="btn" value="Aceptar">
+            <input type="button" class="btn" value="Aceptar" (click)="regUsuario()">
         </div>
         <p>Al crear una cuenta, usted acepta los Términos de servicio y la Política de privacidad.</p>
         <p class="registro">¿Ya tienes una cuenta? <a routerLink="" target="">Inicia Sesión Aquí.</a></p>

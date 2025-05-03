@@ -1,26 +1,47 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {//implements OnInit{
+export class HeaderComponent implements OnInit{
   rolUsu: string = '';
   correoUsu: string = '';
   menuVisible = false;
-  // rutaActual: string = '';
-  // esAdmin: boolean = false;
-  // esCliente: boolean = false;
+  recursoEspec: boolean = false;
+  recurso_Espc_perfil: boolean = false;
 
   constructor(private auth: AuthService, private router: Router) {
     this.rolUsu = this.auth.getRol(); // obtiene el rol (ej. 'admin' o 'cliente')
     this.correoUsu = this.auth.getUsername();
   }
 
-  // ngOnInit(): void {
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const ruta = event.urlAfterRedirects;
+  
+        // Cambia dinámicamente estilos, íconos, enlaces según la ruta
+        if (ruta.includes('homeAdmin')) {
+          this.rolUsu = 'admin';
+        } else if (ruta.includes('homeCliente')) {
+          this.rolUsu = 'cliente';
+        }
+  
+        // Agrega lógica adicional para otras rutas específicas
+        if (ruta.includes('recurso') || ruta.includes('editarRecurso') || ruta.includes('agregarRecurso')) {
+          // Cambia color, ícono, etc.
+          this.recurso_Espc_perfil = true;
+          this.recursoEspec = true;
+        } else {
+          this.recursoEspec = false;
+          this.recurso_Espc_perfil = false;
+        }
+      }
+    });
   //   this.router.events.subscribe(() => {
   //     this.rutaActual = this.router.url;
 
@@ -30,7 +51,7 @@ export class HeaderComponent {//implements OnInit{
   //     /*Verifica si la URL actual contiene ciertas palabras clave, 
   //     para saber si el usuario está en la página del administrador (homeAdmin) o en la del cliente (homeCliente). Según eso, activa o desactiva banderas booleanas. */
   //   });
-  // }
+  }
   
   // Este decorador escucha eventos globales del documento, en este caso cualquier clic.
   // '$event' representa el evento MouseEvent que Angular inyecta automáticamente.
